@@ -41,9 +41,6 @@ app.get('/test', (req, res) => {
 
 app.post('/register', async (req, res) => {
   const { name, email, password } = req.body;
-  if (!name || !email || !password) {
-    alert('Must write all information')
-  }
   try {
     const userDoc = await User.create({
       name,
